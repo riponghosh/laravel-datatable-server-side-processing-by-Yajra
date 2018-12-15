@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/data/users','DatatableController@getUsers')->name('dataProcessing');
+Route::get('/data/users','DatatableController@getUsers')->name('dataProcessing');
 
 Auth::routes();
 

@@ -49,17 +49,12 @@
 			$('#example').DataTable( {
 				"processing": true,
 				"serverSide": true,
-				"ajax": {
-					"url":"<?= route('dataProcessing') ?>",
-					"dataType":"json",
-					"type":"POST",
-					"data":{"_token":"<?= csrf_token() ?>"}
-				},
+				"ajax": "<?= route('dataProcessing') ?>",
 				"columns":[
 					{"data":"name"},
 					{"data":"email"},
 					{"data":"created_at"},
-					{"data":"action","searchable":false,"orderable":false}
+					{"data":'id'}
 				]
 			} );
 		</script>
